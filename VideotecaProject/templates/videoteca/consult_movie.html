@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="info_content">
+        <h1>{{ movie.title }}</h1>
+        <p><b>Título original:</b> {{ movie.original_title }}</p>
+        <p><b>Formato:</b> {{ movie.type }}</p>
+        <p><b>Año:</b> {% if movie.year %} {{ movie.year }} {% endif %}</p>
+        <p><b>Género:</b> {{ movie.genre }}</p>
+        <p><b>Interpretes:</b> {{ movie.actors }}</p>
+        <p><b>Director:</b> {{ movie.director }}</p>
+        <p><b>Duración:</b> {{ movie.runtime }}</p>
+        <p {% if movie.plot %}class="justify_class"{% endif %}><b>Sinopsis:</b> {{ movie.plot }}</p>
+        {% if movie.poster %}
+            <p><img src="{{ movie.poster }}"></p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="table_content">
+        <table>
+            <tr><th>Título</th><th>Formato</th></tr>
+            {% for movie in movie_list %}
+            <tr>
+                <td><a href="{% url 'consult_movie' movie.id %}" class="list_movie_text">{{ movie.title }}</a></td>
+                <td>{{ movie.type }}</td>
+                {% load staticfiles %}
+                <td><a class="edit_button" href="{% url 'edit_movie' movie.id %}"></a></td>
+                <td><a class="delete_button" href="{% url 'delete_movie' movie.id %}"></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Videoteca</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+		<div id="logo"><img src="{% static 'img/logo_oscar.png' %}"/></div>
+		<div id="cabecera">
+			<h1>Videoteca</h1>
+			<nav>
+				<ul>
+					<li><a href="{% url 'home' %}" title="Inicio">Inicio</a></li>
+					<li><a href="{% url 'list_movies' %}" title="Listado">Listado</a></li>
+					<li><a href="{% url 'create_movie' %}" title="Añadir">Añadir</a></li>
+					<li><a href="{% url 'import_all_movies' %}" title="Importar IMDB">Imp. IMDB</a></li>
+				</ul>
+			</nav>
+		</div>
+    </header>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

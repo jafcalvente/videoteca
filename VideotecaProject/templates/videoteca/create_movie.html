@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="info_content">
+        <form action="" method="post">{% csrf_token %}
+            {% include 'videoteca/snippet_movieform_list.html' %}
+            <button class="button"  type="submit">Añadir película</button>
+        </form>
+    </div>
+{% endblock %}

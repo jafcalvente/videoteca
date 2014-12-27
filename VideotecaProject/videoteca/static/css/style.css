@@ -1,0 +1,247 @@
+body {
+	background-color: #FFFFFF;
+    margin: 0;
+}
+header {
+	position: fixed;	/* Ponemos el header siempre visible arriba */
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	color: #FFFFFF;	/* Ponemos el texto blanco */
+	z-index: 999;	/* El header siempre estará por encima */
+	background-color: #000000;
+	
+	/* Establecemos sombra vertical grisacea */
+	/*-webkit-box-shadow: 0px 5px 5px #888888;*/
+	box-shadow: 0px 5px 5px #888888;*/
+}
+header div {
+	height: 100%;		/* Los contenedores del header ocuparan el mismo alto que este */
+}
+table {
+    margin: auto;
+    border-spacing: 15px 0px;
+}
+#logo {
+	float: left;	/* Colocamos el logo a la izquierda del header */
+	width: 10%;
+}
+#cabecera {
+	float: right;	/* Colocamos la cabecera a la derecha del header */
+	width: 90%;
+}
+#cabecera h1  {
+	float: left;	/* Colocamos el t�tudo a la izquierda de la cabecera */
+	width: 20%;
+	text-align: center; /* Alinea el texto horizontalmente en el centro */
+}
+nav ul {
+	display: inline;	/* Quita el tabulado de todos los menús de navegación */
+	list-style: none;	/* Quita los puntos de todos los menús de navegación */
+}
+nav a{
+	text-decoration: none;	/* Quita el subrayado en todos los enlaces del menú de navegación */
+}
+#cabecera nav {
+	float: right;	/* Colocamos el menú de navegación a la derecha de la cabecera */
+	height: 100%;
+	width: 80%;
+}
+#cabecera nav  li{
+	float: left;	/* Va colocando cada elemento de la lista lo más a la izquierda del contenedor que pueda */
+	width: 20%;
+	height: 95%;
+	
+	position:relative;	/* Lo que contenga se distribuirá en base a coordenadas relativas */
+
+    border-top: solid;		/* Introduce para cada elemento un borde superior naranja */
+    border-top-color: #FF8000;
+    border-top-width: 5%;
+
+    border-right: solid;	/* Introduce para cada elemento un borde a la derecha gris */
+    border-right-color: #848484;
+    border-right-width: 2px;
+	
+	/* 
+	 * Establecemos transiciones de 0.2s cuando:
+	 * - El atributo 'background-color' cambie su valor
+	 * - El atributo 'border-top-color' cambie su valor
+	 */
+	-webkit-transition: background-color 0.2s ease, border-top-color 0.2s ease; 
+	-moz-transition: background-color 0.2s ease, border-top-color 0.2s ease; 
+	-o-transition: background-color 0.2s ease, border-top-color 0.2s ease; 
+	transition: background-color 0.2s ease, border-top-color 0.2s ease; 
+}
+#cabecera nav li:last-child {
+    border-right: none;		/* El �ltimo elemento no mostrar� un borde a la derecha */
+}
+#cabecera nav li:hover {
+	background-color: #585858;	/* Al pasar el ratón por encima de un elemento cambiará el color de fondo */
+    border-top-color: #FFBF00;	/* Al pasar el ratón por encima de un elemento cambiará el color del borde superior */
+}
+#cabecera nav li a{
+	color: #848484;
+
+	/* Centrar� el contenido del enlace */
+	position:absolute;	
+	top: 40%;
+	width: 100%;
+	height: 50%;
+	text-align: center;
+
+	/* 
+	 * Establecemos transiciones de 0.4s cuando:
+	 * - El atributo 'color' cambie su valor
+	 * - El atributo 'padding-left' cambie su valor
+	 */
+	-webkit-transition: color 0.4s ease, padding-left 0.4s ease, font-size 0.4s ease; 
+	-moz-transition: color 0.4s ease, padding-left 0.4s ease, font-size 0.4s ease; 
+	-o-transition: color 0.4s ease, padding-left 0.4s ease, font-size 0.4s ease; 
+	transition: color 0.4s ease, padding-left 0.4s ease, font-size 0.4s ease; 
+	
+}
+#cabecera nav li:hover a {
+	/* Atenci�n al hecho de que el evento 'hover' se define sobre el elemento de la lista, y no sobre un enlace */
+	/* Al pasar el rat�n por encima de un elemento... */ 
+	color: #FFFFFF;			/* ...cambiar� el color del texto */
+	padding-left: 0px;		/* ...se desplazar� el texto hacia la derecha */
+	font-size: 140%;		/* ...aumentar� el tama�o del texto */
+}
+#content {
+	clear: both;
+}
+#home_content {
+    height: 768px;
+    width: 100%;
+    background-image: url(../img/background_home.jpg);
+    background-repeat: no-repeat;
+}
+.justify_class {
+    text-align: justify;
+}
+.errorlist {
+	list-style: none;
+    color: red;
+}
+.table_content {
+    text-align: center;
+    margin-top: 120px;
+}
+.info_content {
+    text-align: center;
+    margin: 15%;
+    margin-top: 120px;
+    padding: 10px;
+    background-color: floralwhite;
+    border-radius: 20px;
+}
+.info_content h1 {
+	text-shadow:#A9A9A9 5px 5px 5px;
+	color: #000000;
+	font-size: 48px;
+}
+.info_content fieldset {
+	border: none;
+}
+.info_content .label {
+    float: left;
+	text-align: right;
+	width: 19%;
+    margin-right: 1%;
+}
+.info_content .input {
+    float: left;
+    text-align: left;
+	width: 80%;
+}
+.info_content input {
+	width: 80%;
+}
+.info_content input[type='number'] {
+	width: 42px;
+}
+.info_content textarea {
+	width: 80%;
+}
+.button {
+    text-decoration: none;
+    font-size: small;
+  padding: 8px 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  color: #444;
+  border: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
+  background-image: -moz-linear-gradient(0% 100% 90deg, #bbb, #fff);
+  background-color: #fff;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -o-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* Método más flexible. los objetos siguen centrados aunque cambiemos el tamaño dinámicamente */
+.container_center {
+	display: table;
+	height: 300px; width:450px;
+	margin: 0 auto;	/* lo centramos */
+	
+	border-style:dashed;
+border-width:medium;
+}
+.content_center {
+	display: table-cell;
+	vertical-align: middle; /* centramos verticalmente */
+}
+.pseudo-cell {
+	width:250px;
+	margin: 0 auto;	/* lo centramos */
+	text-align: center;
+}
+#contenedor2 img {
+	display: block;	/* centramos la imagen */
+	margin: 0 auto;
+}
+
+/** OTROS ATRIBUTOS **/
+/*
+- Establece un borde de línea discontinua
+border-style:dashed;
+border-width:medium;
+*/
+
+.list_movie_text {
+	text-decoration: none;
+	text-shadow:#000000 0px 0px 0px;
+	color: darkblue;
+	font-size: 18px;
+	transition: text-shadow 3s easy, color 3s easy;
+}
+.list_movie_text:hover {
+	text-shadow:#000000 0px 0px 0px;
+	color: darkgoldenrod;
+    border-color: goldenrod;
+}
+.edit_button {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background: url(../img/edit_icon_off.png);
+}
+.edit_button:hover {
+    background: url(../img/edit_icon_on.png);
+}
+.delete_button {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background: url(../img/delete_icon_off.png);
+}
+.delete_button:hover {
+    background: url(../img/delete_icon_on.png);
+}
